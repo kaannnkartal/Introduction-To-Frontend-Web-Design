@@ -1,0 +1,210 @@
+
+
+/* Burada en baştaki margin ve padding değerlerini sıfırladık. '*' : tüm icerigi kapsaması icin konuldu
+ margin değeri : her bir icerigin diğer iceriklerle olan mesafesi 0.
+ padding bir icerigin icindeki degerler ile kendisi asasındaki olan mesafesi 0.
+ box-sizing : border-box kullanımı ise eklediğimiz borderların ayrı bir pixel almaması icin.
+ Sadece goruntu olarak eklemek istiyoruz, diğer türlü pixel ayarlarımızı bozabiliyor. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dosyanın icindeki html tag'i icerisindeki her seyi kapsıyor. Ve default fontsize 10px. */
+
+html {
+    font-size: 8px;
+}
+
+
+
+
+/* Body kısmı icerisine ise kullanacağımız yazı fontunu, sayfanın tamami olan arka plan rengini
+font size 1.6rem diyerek html icerisinde verdiğimiz fontsize 10px değerinin 1.6 katını belirtir.
+Boyle kullanmamızın sebebi htmldeki font-size'ı değiştirdiğimizde diğer yerleri değiştirmemize gerek
+kalmayacak cünkü bagımlı (katsayısal) hale getirmis oluyoruz.
+Line height ile icerisindeki satırların yüksekliğini 1.5 pixel vermis oluyoruz.
+text align bildiğimiz gibi icerisindeki yazıların merkezi olmasıdır.*/
+body {
+    font-family: 'Borel', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: wheat;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333333;
+}
+
+/* Burada 'a' etiketli linkler icin kullandığımız etikettir. Ve css dosyasının icerisinde
+text-decoration : none diyerek default olarak altı cizi olan link'in altındaki cizgiyi kaldırıyoruz.*/
+a{
+    text-decoration: none;
+
+}
+
+/* 'p' Etiketi paragraf etiketidir. Padding değerini yani icerisinde bulunduğu blok ile paragraf arasındaki
+mesafeyi belirtiyoruz. Üstten ve alttan 16px olacak şekilde iken sağdan ve soldan boşluk olmasın diye
+2. parametresini 0 girdik.*/
+p{
+    padding: 1.6rem 0;
+}
+
+
+header{
+    height: 46rem;    
+}
+
+/* header  icerisindeki header arka plan fotoğraf ayarlarını yapmıs olduk.
+1- Position : absolute -> Sebebi : Header'ın icerisinde olan baslık ve paragraf fotoğrafın altında kalıyordu
+O sebepten dolayı absolute yaparak yazıları fotoğrafın üzerine alabildik.
+Yazıları nasıl aldığımız ??? paragraf icin sadece padding degeri verdik. H başlığı icinde aynı sekilde
+Belki de header baslıgı icerisinde bir oldukları icin oyle olmustur bilmiyorum,
+fakat yazı ile gorsel farklı divlerde tutuluyor. 
+2- backgroung-image ile fotoğrafımızın kendisini arka plan yaptık.
+3- Background size sayfanın  belirttiğimiz en ve yüksekliğine sığması icin
+Eğer sayfa büyültülür ya da kücültülürse de coverlayacaktır.
+4- Opacity : Opaklık değerini yarı yarıya yaptık cünkü arka plan fotoğrafının yazıyla aynı baskınlıkta olmasını istemedik
+5-) z-index : -1 fotoğrafı olduğu alandan bir geri atarak, background photo yapmıs olduk. Yazı üstünde olmus oldu.*/
+header .bg-image{
+    position: absolute;
+    background-image: url(images/header_foto.jpeg);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 46rem;
+
+    opacity: 0.5;
+    z-index: -1;
+    
+}
+
+header h1{
+    padding: 12rem;
+    padding-bottom: 0;
+}
+
+
+/* Buradaki btn 'Read More' icindir, bilmemiz gereken şey, transition : üzerine geldiğimizde renk değiştiriyoruz
+bunun hızını yani saniye olarak tepkimesini ayarlamıs oluyoruz. */
+.btn{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: 0.5rem 0;
+
+    transition: all 0.5s;
+
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+#section-a{
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0;
+    
+}
+
+#section-b{
+    padding: 3.2rem 0;
+}
+
+img{
+    width: 100%;  /* İcerisinde bulundugu div'in boyutlarını kapsasın. O yüzedn 100% */
+
+    height: auto; /* Otomatik olarak kendisini olceklendirmesini istiyoruz. Cünkü width ile oynadık. */
+
+}
+
+#section-b ul{
+    list-style: none;
+}
+
+#section-b li{
+    background-color: #ffff;
+    color: #333;
+    /* margin-bottom: 1.5rem; */
+    margin: 0rem 1.5rem;
+
+}
+
+.col .content{
+    padding: 1.5rem;
+}
+
+#section-c{
+
+    background-color: #eaeaea;
+
+    color: #333;
+    padding-top:  3rem;
+}
+
+#section-c .aboutUs{
+    background-color: rgb(3, 44, 44);
+    width: 100%;
+    padding: 1.6rem;
+    color: #eaeaea;
+
+}
+
+#section-c .contactUs{
+    background-color: #393333b5;
+    color: #eaeaea;
+    padding: 1.6rem;
+}
+
+#section-d{
+    margin-top: 3rem;
+    padding-top: 1rem;
+    background-color: black;
+    color: #eaeaea;
+}
+
+#section-d .footer  p:first-child{
+    padding-bottom: 0px;
+}
+#section-d .footer p:nth-child(2) {
+    padding-top:  0px;
+}
+
+#section-d > footer .footer > p span{
+    color:blue;
+}
+
+@media screen and (min-width:800px) {
+    html{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    html{
+        font-size: 12px;
+    }
+    #section-b li{
+
+    
+        width: 25%;
+        display: inline-block;
+    }
+
+
+    #section-c .aboutUs {  
+        width: 50%;
+        float: left;
+        
+        
+    }
+}
+

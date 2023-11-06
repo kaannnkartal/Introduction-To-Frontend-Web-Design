@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #container {
+            background-color: aqua;
+            /* margin: 0 15px; */
+            height: 100px;
+
+
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #container .piece {
+            flex: 1;
+            height: 50px;
+            background-color: black;
+            color: white;
+
+            /* margin: 0 5px; */
+        }
+
+        .div1 {
+            height: auto;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .div2 {
+            margin: 20px 10px;
+            max-width: 30%;
+            max-height: 100%;
+            display: inline-block;
+            border: 2px solid lightgray;
+        }
+
+        .div2 img {
+            max-width: 100%;
+            max-height: auto;
+        }
+
+        .div2 p {
+            max-width: 100%;
+            line-height: 1.5;
+            padding-left: 10px;
+            text-align: left;
+            
+            
+        }
+
+        .div2 button{
+            background-color: rgb(1, 96, 248);
+            color: #fff;
+            border-radius: 5px;
+            padding: 15px 5px;
+
+            margin-bottom: 20px;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- <div id="container">
+        <div class="piece">
+
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+        <div class="piece" style="text-align: right;">
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+    </div> -->
+
+
+    <div class="div1">
+        <div class="div2">
+            <img src="kahve.jpg" alt="">
+
+            <h2>Card Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure in accusantium doloremque eius
+                nobis.</p>
+
+            <button>Go somewhere</button>
+        </div>
+
+        <div class="div2">
+            <img src="kahve.jpg" alt="">
+        
+            <h2>Card Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure in accusantium doloremque eius
+                nobis.</p>
+        
+            <button>Go somewhere</button>
+        </div>
+
+        <div class="div2">
+            <img src="kahve.jpg" alt="">
+        
+            <h2>Card Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure in accusantium doloremque eius
+                nobis.</p>
+        
+            <button>Go somewhere</button>
+        </div>
+    </div>
+</body>
+
+</html>

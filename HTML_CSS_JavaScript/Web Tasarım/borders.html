@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .kutu {
+            height: 150px;
+            width: 400px;
+            margin: 20px;
+            padding: 20px;
+
+        }
+
+        #kutu1 {
+            border: 1px solid blue;
+            background-color: lightpink;
+            padding: 10px;
+
+        }
+
+        #kutu2 {
+            background-color: lightseagreen;
+            border-top: 3px solid lightsalmon;
+            border-right-style: groove;
+        }
+
+        #kutu3 {
+            border-width: 5px;
+            border-style: double;
+            border-color: seagreen;
+            background-color: lightsteelblue;
+        }
+        #kutu4 {
+            border: 4px solid red;
+            border-radius: 10px;
+
+            
+            background-color: chocolate;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Border 3 parametre alır. 1. parametre : sınırın pixel uzunlugu
+    2. parametre şekli (mesela solid) 3. parametre ise rengidir.-->
+    <!-- Border-radius ise cercevenin kıvrımının daireleşmesi icin kullanıyoruz
+    biraz daha yumusak hatlar icin olabilir. ya da radius %50 yaparsak tam bir profil
+    fotoğrafı cercevesi olan daire gorunumunu elde ederiz. Tabiki bunun icin widht ve heightin
+    birbirine eşit pixellerde olması gerekir kare gibi.-->
+
+    <div class="kutu" id="kutu1">Kutu1</div>
+    <div class="kutu" id="kutu2">Kutu2</div>
+    <div class="kutu" id="kutu3">Kutu3</div>
+    <div class="kutu" id="kutu4">Kutu4</div>
+
+
+</body>
+
+</html>

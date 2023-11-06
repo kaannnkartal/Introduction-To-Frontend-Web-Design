@@ -1,0 +1,572 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Borel', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 6px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: Montserrat;
+}
+
+nav {
+    font-family: "Montserrat";
+    background-color: #2C3E4F;
+    color: #fff;
+    padding: 2rem 0px;
+
+    /* Position fixed : Sonuç olarak,
+        position: fixed özelliği,
+        sabitlenmiş bir element oluşturmak için kullanılır
+        ve kullanıcı sayfayı kaydırdığında bile elementin yerinin değişmemesini sağlar. */
+    position: fixed;
+    width: 100%;
+
+    z-index: 1;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+#logo-box {
+    float: left;
+
+}
+
+/* Boot Strap Yazısı */
+#logo-box .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin: 0.5rem 1rem;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: black;
+}
+
+#nav-links {
+
+    float: right;
+
+}
+
+#nav-links ul {
+    list-style-type: none;
+}
+
+#nav-links .nav-item {
+
+    float: left;
+
+}
+
+#nav-links .nav-link {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+
+
+    margin: 0.5rem 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    transition: color 0.4s;
+
+}
+
+#nav-links .nav-link:hover {
+    color: #1ABC9B;
+}
+
+#nav-links .nav-icon{
+    display: none;
+}
+
+@media(max-width:982px){
+    #logo-box{
+        float: none;
+        text-align: left;
+    }
+
+    #nav-links{
+        float: none;
+    }
+
+    #nav-links .nav-link{
+        font-size: 2rem;
+        /* margin-left: 0px; */
+    }
+
+    #nav-links .nav-item{
+        float: none;
+        text-align: left;
+
+    }
+    #nav-links .nav-icon{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 3rem;
+    }
+
+}
+
+header {
+    background-color: #1ABC9B;
+    height: 700px;
+    padding-top: calc(77px + 6rem);
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 260px;
+    height: auto;
+    /*En boy oranı bozulmasın. */
+
+}
+
+header h1 {
+    color: #fff;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+header h2 {
+    color: #fff;
+    font-size: 2.4rem;
+    font-family: "lato";
+    font-weight: 300;
+}
+
+.star-light {
+    /* Start Bootstrap altındaki cizgi ve yıldız */
+    border: none;
+    border-top: 0.4rem solid #fff;
+
+    max-width: 25rem;
+    border-radius: 10px;
+    margin: 2.5rem auto;
+    height: 0px;
+    overflow: visible;
+}
+
+.star-light::after {
+    color: #fff;
+    background-color: #1ABC9B;
+}
+
+.star-dark::after {
+    color: #2D3D4F;
+    background-color: #fff;
+}
+
+.star-light::after,
+.star-dark::after {
+    /* Yıldızı Eklemek ve Konumlandırmak */
+    content: "\2605";
+
+    font-weight: 900;
+    font-size: 3.2rem;
+    position: relative;
+    top: -30px;
+
+    padding: 0px 1rem;
+}
+
+section {
+
+    background-color: #fff;
+    padding: 10rem 0;
+    text-align: center;
+
+}
+
+#portfolio h2 {
+    font-size: 4.8rem;
+    color: #2D3D4F;
+    text-transform: uppercase;
+}
+
+.star-dark {
+    border: none;
+    border-top: 0.4rem solid #2C3E4F;
+    max-width: 25rem;
+    border-radius: 10px;
+    margin: 2.5rem auto;
+    overflow: visible;
+    height: 0px;
+}
+
+.col {
+    float: left;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+
+}
+
+.portfolio-item {
+
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.portfolio-item a img {
+    display: block;
+
+}
+
+.portfolio-item-hover-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1ABC9B;
+    opacity: 0;
+}
+
+.portfolio-item-hover-animation .icon {
+    color: #fff;
+    font-size: 8rem;
+    /* + İkonunu ekrana ortalamış olduk */
+    /*Bu kod bloğu,
+        bir elemanı dikey ve yatay yönde ortalamak için kullanılan yaygın bir tekniktir. position: absolute;
+        ile birlikte top: 50%;
+        ve left: 50%;
+        özellikleri,
+        bu elemanı ekranda yatay ve dikey yönde ortalamak için ekranın sol üst köşesine göre yüzde 50 oranında konumlandırır. Ancak,
+        bu durumda elemanın orta noktası,
+        elemanın kendi genişlik ve yüksekliği dahilindeki sol üst köşesidir. Bu nedenle,
+        elemanın tam olarak ortalanması için transform ve translate özellikleri kullanılır. transform: translate(-50%, -50%);
+        ifadesi,
+        elemanın kendi boyutlarına göre yüzde -50 oranında yatayda ve dikeyde kaydırılacağını belirtir. Bu,
+        elemanın orta noktasının ekranın ortasına denk gelmesini sağlar. */
+    /*Yani,
+            bu kod bloğu,
+            bir elemanı dikey ve yatayda kesin bir şekilde ortalamak için kullanılır. Ekrana göre responsive bir şekilde ortalanmasını sağlar,
+            böylece elemanın boyutu ne olursa olsun sayfada her zaman ortada kalır. Bu,
+            özellikle belirli boyutlara sahip kutular,
+            resimler veya metinler için oldukça kullanışlı bir tekniktir.*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.portfolio-item:hover .portfolio-item-hover-animation {
+    opacity: 0.8;
+    border-radius: 13px;
+
+}
+
+
+/* .portfolio-item-hover-animation2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    visibility: hidden;
+
+    background-color: #06f4c4;
+} */
+
+/* .portfolio-item-hover-animation i{
+    font-size: 25rem;
+    object-fit: cover;
+    color: #fff;
+} */
+
+
+.portfolio-item a img {
+
+    max-width: 100%;
+    height: auto;
+    border-radius: 13px;
+
+}
+
+/* .portfolio-item:hover .portfolio-item-hover-animation{
+    visibility: visible;
+} */
+
+
+#about {
+    background-color: #1ABC9B;
+
+    color: #fff;
+}
+
+#about h2 {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+}
+
+#about-text {
+    text-align: left;
+}
+
+#about-text .left {
+    float: none;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 25px;
+}
+
+#about-text .right {
+    float: none;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 5px;
+}
+
+@media(min-width :992px) {
+    #about-text .left {
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 210px;
+    }
+
+    #about-text .right {
+        float: right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+    }
+}
+
+.btn {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.btn-download {
+    background-color: transparent;
+    color: #fff;
+    padding: 2.2rem 1.6rem;
+    border-color: #fff;
+}
+
+.btn-download:hover {
+    color: black;
+    background-color: #fff;
+}
+
+.btn-send {
+    background-color: #1ABC9B;
+    border-color: #1ABC9B;
+    color: #fff;
+    padding: 1.2rem;
+    text-transform: capitalize;
+}
+
+.btn-send:hover {
+    background-color: #128f76;
+    border-color: #128f76;
+}
+
+.btn:hover {}
+
+/* #download-button{
+    margin-top: 4.8rem;
+    padding-top: 3.6rem;
+    
+}
+
+#download-button a{
+    border: 2px solid #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+#download-button a i {
+    margin-right: 10px;
+    font-size: 2rem;
+} */
+
+
+#contact h2 {
+    font-size: 4.8rem;
+    color: #2D3D4F;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    float: left;
+    width: 100%;
+
+}
+
+.contact-form input,
+textarea {
+
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    margin: 1.5rem 0;
+    font-size: 2.4rem;
+    /* padding : 0 20%;  */
+}
+
+.contact-form input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+.contact-form table {
+
+    width: 100%;
+    padding: 5% 10%;
+
+
+}
+
+.container-footer {
+
+    width: 100%;
+}
+
+footer div {
+    background-color: #2C3E4F;
+    float: left;
+    position: relative;
+
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    padding: 1rem 0;
+}
+
+.container-footer div h2 {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.container-footer div p {
+    color: #fff;
+
+
+}
+
+@media(min-width :992px){
+    footer div{
+        width: 33.333%;
+    }
+}
+
+
+.copyright {
+    background-color: #19262F;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+
+@media (min-width:576px) {
+    .container {
+        /* max-width: 540px; */
+    }
+
+    html {
+        font-size: 7px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        /* max-width: 720px; */
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    .col {
+        width: 50%;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        /* max-width: 960px; */
+    }
+
+    html {
+        font-size: 9px;
+    }
+
+    .col {
+        width: 33.333%;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        /* max-width: 1140px; */
+    }
+
+    html {
+        font-size: 10px;
+    }
+}
+
+
+/* .contact-form tbody{
+    width: 70%;
+} */

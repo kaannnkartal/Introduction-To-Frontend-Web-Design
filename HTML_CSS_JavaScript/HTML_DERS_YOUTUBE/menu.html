@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatay Menü Yapımı</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        ul {
+            height: 10%;
+            list-style-type: none;
+            width: 100%;
+            background-color: #444461;
+            
+        }
+
+        ul li {
+            font-size: 20px;
+            display: inline-block;
+            width: 100px;
+            padding: 10px 40px;
+            text-align: center;
+            
+         
+        }
+
+        ul>li a {
+            
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #c4bb9d;
+            
+
+
+        }
+
+        ul li:hover{
+            background-color: red;
+            transition: 0.8s;
+        }
+        ul li a:hover{
+            color: #3bcc9e;
+        }
+
+        #news-content{
+            
+            width: 180px;
+            position: absolute;
+            z-index: 1;
+            margin-top: 10px;
+            margin-left: -40px;
+            display: none;
+            
+        }
+
+        #news-content > ul{
+            
+            padding-left: 20px;
+            width: 160px;
+            
+        }
+
+        #news-content > ul  li{
+            
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 160px;
+            /* margin-left: 0px; */
+        }
+
+        .news-li:hover #news-content{
+            background-color: red;
+            display: block;
+        }
+
+        #news3-content{
+
+            width: 250px;
+            display: none;
+            background-color: black;
+            position: absolute;
+            z-index: 1;
+            margin-left: 160px;
+            margin-top: -34px;
+            
+        }
+
+        #news3-content > ul{
+
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+        #news3-content > ul li{
+            width: 200px;
+        }
+
+        .news3-li:hover #news3-content{
+            background-color: red;
+            display: block;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="news-li">
+            <a href="#">News</a>
+            <div id="news-content">
+                <ul>
+                    <li><a href="#">News 123</a></li>
+                    <li><a href="#">News 2</a></li>
+                    <li class="news3-li">
+                        <a href="#">News 3</a>
+                        <div id="news3-content">
+                            <ul>
+                                <li><a href="">News3_1</a></li>
+                                <li><a href="">News3_2</a></li>
+                                <li><a href="">News3_3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#">News 4</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+
+
+</body>
+
+</html>
